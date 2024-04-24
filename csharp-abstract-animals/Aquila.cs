@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp_abstract_animals
 {
-    public class Aquila : Animale
+    public class Aquila : Animale, IVolante
     {
         public override string Verso()
         {
@@ -17,6 +17,11 @@ namespace csharp_abstract_animals
         {
             string mangia = "Topini Simpatici";
             return mangia;
+        }
+
+        public void Vola()
+        {
+            Console.WriteLine("L'Aquila vola");
         }
     }
 }

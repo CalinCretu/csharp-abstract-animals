@@ -2,6 +2,15 @@
 {
     internal class Program
     {
+        static void FaiVolare(IVolante animale)
+        {
+            animale.Vola();
+        }
+
+        static void FaiNuotare(INuotante animale)
+        {
+            animale.Nuota();
+        }
         static void Main(string[] args)
         {
             var animali = new List<Animale>
@@ -22,7 +31,34 @@
                 Console.WriteLine($"L'animale {nomeAnimale} fa così: {versoAnimale}\n");
                 Console.WriteLine($"L'animale {nomeAnimale} mangia: {ciboAnimale}");
                 Console.WriteLine("-----");     // linea divisoria per creare ordine quando stampo
+
+                if (animale is IVolante volante)        // se l'animale appartiene all'interfaccia IVolante
+                {
+                    FaiVolare(volante);                 // richiamo il metodo dell'interfaccia
+                }
+
+                if (animale is INuotante nuotante)
+                {
+                    FaiNuotare(nuotante);               // se l'animale appartiene all'interfaccia INuotante
+                }
+
+                Console.WriteLine("-----");
             }
+
+            //foreach (var animale in animali)       // ciclo sempre la lista di animali
+            //{
+            //    if (animale is IVolante volante)        // se l'animale appartiene all'interfaccia IVolante
+            //    {
+            //        FaiVolare(volante);                 // richiamo il metodo dell'interfaccia
+            //    }
+
+            //    if (animale is INuotante nuotante)
+            //    {
+            //        FaiNuotare(nuotante);               // se l'animale appartiene all'interfaccia INuotante
+            //    }
+
+            //    Console.WriteLine("-----");             // richiamo il metodo dell'interfaccia
+            //}
         }
     }
 }

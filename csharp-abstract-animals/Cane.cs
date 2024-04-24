@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp_abstract_animals
 {
-    public class Cane : Animale
+    public class Cane : Animale, INuotante
     {
         public override string Verso()
         {
@@ -18,6 +18,10 @@ namespace csharp_abstract_animals
         {
             string mangia = "Carne";
             return mangia;
+        }
+        public void Nuota()
+        {
+            Console.WriteLine("Il Cane nuota");
         }
     }
 }
