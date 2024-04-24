@@ -10,8 +10,8 @@ namespace csharp_abstract_animals
     {
         public string Dormi()             // metodo pubblico
         {
-           string dormire = "~_~";
-            return dormire;
+            string dormi = "~_~";
+            return dormi;
         }
         public abstract string Verso();   //metodi astratti
 
@@ -22,14 +22,56 @@ namespace csharp_abstract_animals
     {
         public override string Verso()
         {
-            string abbaio = "Bau Bau!";
-            return abbaio;
+            string verso = "Bau Bau!";
+            return verso;
         }
 
         public override string Mangia()
         {
-            string alimentazione = "Carne";
-            return alimentazione;
+            string mangia = "Carne";
+            return mangia;
+        }
+    }
+
+    public class Passerotto : Animale
+    {
+        public override string Verso()
+        {
+            string verso = "Cip Cip Cirip";
+            return verso;
+        }
+        public override string Mangia()
+        {
+            string mangia = "Insetti";
+            return mangia;
+        }
+    }
+
+    public class Aquila : Animale
+    {
+        public override string Verso()
+        {
+            string verso = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH";
+            return verso;
+        }
+        public override string Mangia()
+        {
+            string mangia = "Topini Simpatici";
+            return mangia;
+        }
+    }
+
+    public class Delfino : Animale
+    {
+        public override string Verso()
+        {
+            string verso = "Fiiiiiiii ( fischio )";
+            return verso;
+        }
+        public override string Mangia()
+        {
+            string mangia = "Pesciotti Simpatici";
+            return mangia;
         }
     }
 }
